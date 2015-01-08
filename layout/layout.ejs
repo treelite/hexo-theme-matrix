@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Treelite</title>
+        <%- css('css/main.css') %>
+    </head>
+    <body>
+        <aside>
+            <section class="profile">
+                <div class="avatar"></div>
+                <h1>Treelite</h1>
+                <p>Web Developer | Beijing, China</p>
+                <p><%- mail_to(config.email) %></p>
+                <p>
+                    <%- link_to('https://github.com/treelite', 'GitHub', {external: true})%>
+                    <%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true})%>
+                </p>
+            </section>
+            <section class="cpr">
+                <p>© 2015 Treelite</p>
+                <p>Powered by <%- link_to('http://hexo.io/', 'Hexo', {external: true}) %>, <%- link_to('https://github/treelite/hexo-theme-matrix', 'Matrix', {external: true}) %> Theme</p>
+            </section>
+        </aside>
+
+        <main>
+            <%- body %>
+        </main>
+    </body>
+</html>

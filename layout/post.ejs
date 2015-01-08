@@ -1,0 +1,17 @@
+<article>
+    <h3><%= page.title %></h3>
+    <%- page.content %>
+    <p class="meta">
+        <%- renderTags(page.tags['_index']) %>
+        <time datetime="<%= page.date.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time>
+    </p>
+</article>
+
+<div class="links">
+<% if (page.prev) { %>
+    <a href="<%- url_for(page.prev.path) %>" class="prev"><%= page.prev.title %></a>
+<% } %>
+<% if (page.next) { %>
+    <a href="<%- url_for(page.next.path) %>" class="next"><%= page.next.title %></a>
+<% } %>
+</div>

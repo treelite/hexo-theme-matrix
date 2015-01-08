@@ -1,0 +1,21 @@
+<% page.posts.forEach(function (item) { %>
+<article>
+    <h3><a href="<%- item.path %>"><%= item.title %></a></h3>
+    <%- item.excerpt %>
+    <p class="meta">
+        <%- renderTags(item.tags['_index']) %>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+    </p>
+</article>
+<% }) %>
+
+<% if (page.prev_link || page.next_link) { %>
+<div class="links">
+<% if (page.prev_link) { %>
+    <a href="<%- url_for(page.prev_link) %>" class="prev">Next</a>
+<% } %>
+<% if (page.next_link) { %>
+    <a href="<%- url_for(page.next_link) %>" class="next">Previous</a>
+<% } %>
+</div>
+<% } %>
