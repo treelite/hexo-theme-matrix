@@ -10,12 +10,12 @@
 <% }) %>
 
 <% if (page.prev_link || page.next_link) { %>
-<div class="links">
+<section class="links">
 <% if (page.prev_link) { %>
     <a href="<%- url_for(page.prev_link) %>" class="prev">Next</a>
 <% } %>
 <% if (page.next_link) { %>
     <a href="<%- url_for(page.next_link) %>" class="next">Previous</a>
 <% } %>
-</div>
+</section>
 <% } %>

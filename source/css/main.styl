@@ -1,25 +1,23 @@
 // main
-@require '_init'
+@require '_variables'
 
-aside
-    position: fixed
-    top: 0
-    left: 0
-    bottom: 0
-    width: $width-aside
-    padding: 20px
-    border-right: 1px solid #CCC
-    background: #EEE
+html,
+body
+    margin: 0
+    padding: 0
+    font: $font-size/$line-height Tahoma,Helvetica,sans-serif
+    color: #333
+    background: #FFF
+    min-width: 960px
+    position: relative
 
-aside
-    @import '_aside'
+a
+    color: #4183C4
+    text-decoration: none
 
-main
-    margin-left: 400px
-    padding: 10px 10px 30px 10px
+    &:hover
+        text-decoration: underline
 
-main
-    @import '_article'
-
-main
-    @import '_links'
+@import '_aside'
+@import '_main'
+@import '_highlight'

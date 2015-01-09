@@ -1,30 +1,40 @@
 // aside style
-@require '_init'
+@require '_variables'
 
-.profile
-    text-align: center
-    a
-        margin: 0 5px
-
-    .avatar
-        display: inline-block
-        width: 150px
-        height: @width
-        border: 5px solid #FFF
-        border-radius: 999
-        box-shadow: 0 0 20px #333
-        background: url(img/avatar.jpg) -5px -5px no-repeat
-
-.cpr
-    position: absolute
-    text-align: center
-    font-size: 14px
-    color: #BBB
+aside
+    position: fixed
+    top: 0
     left: 0
-    right: 0
-    bottom: 10px
+    bottom: 0
+    width: $width-aside
+    padding: $aside-padding
+    border-right: 1px solid #CCC
+    background: #EEE
 
-    p
-        margin: 0
-    a
+    .profile
+        text-align: center
+        a
+            margin: 0 5px
+
+        .avatar
+            display: inline-block
+            width: 150px
+            height: @width
+            border: 5px solid #FFF
+            border-radius: 999
+            box-shadow: 0 0 20px #333
+            background: url(img/avatar.jpg) -5px -5px no-repeat
+
+    .cpr
+        position: absolute
+        text-align: center
+        font-size: 14px
         color: #BBB
+        left: 0
+        right: 0
+        bottom: 10px
+
+        p
+            margin: 0
+        a
+            color: #BBB
