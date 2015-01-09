@@ -1,0 +1,27 @@
+// links style
+@require '_init'
+
+.links
+    position: absolute
+    bottom: 0
+    left: $width-aside + 10px
+    right: 10px
+    border-top: 1px dashed #CCC
+    height: 30px
+    line-height: @height
+    font-size: 14px
+    text-align: right
+    overflow: hidden
+
+    a
+        .prev
+            float: left
+            &::before
+                content: "«"
+                margin-right: 3px
+
+        .next
+            float: right
+            &::after
+                content: "»"
+                margin-left: 3px

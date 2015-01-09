@@ -1,0 +1,25 @@
+// main
+@require '_init'
+
+aside
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: $width-aside
+    padding: 20px
+    border-right: 1px solid #CCC
+    background: #EEE
+
+aside
+    @import '_aside'
+
+main
+    margin-left: 400px
+    padding: 10px 10px 30px 10px
+
+main
+    @import '_article'
+
+main
+    @import '_links'

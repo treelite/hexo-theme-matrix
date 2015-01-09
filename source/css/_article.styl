@@ -1,0 +1,24 @@
+// article style
+@require '_init'
+
+article
+    border-bottom: 1px dashed #CCC
+
+    &:last-of-type
+        border-bottom: none
+
+    h1
+        text-align: center
+
+    p
+        color: #666
+        text-indent: 2em
+
+        .meta
+            font-size: $font-size-small
+            color: #CCC
+            text-align: right
+
+            a
+                color: #CCC
+                margin: 0 3px
