@@ -7,6 +7,10 @@
     </p>
 </article>
 
+<% if (config.disqus_shortname) { %>
+<section id="disqus_thread" class="comments"></section>
+<% } %>
+
 <section class="links">
 <% if (page.prev) { %>
     <a href="<%- url_for(page.prev.path) %>" class="prev"><%= page.prev.title %></a>
