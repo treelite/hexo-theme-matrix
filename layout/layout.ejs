@@ -17,6 +17,9 @@
                     <%- link_to('https://github.com/treelite', 'GitHub', {external: true})%>
                     <%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true})%>
                 </p>
+                <% if (config.feed) { %>
+                    <p><%- link_to('/atom.xml', 'RSS', {external: true})%></p>
+                <% } %>
             </section>
             <section class="cpr">
                 <p>© 2015 Treelite</p>
