@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <%- partial('_partial/title') %>
         <%- css('css/main') %>
+        <% if (config.feed) { %>
+        <link rel="alternative" href="<%- url_for(config.feed.path) %>" title="<%= config.title %>" type="application/atom+xml">
+        <% } %>
         <%- partial('_partial/track') %>
         <%- partial('_partial/disqus') %>
     </head>
@@ -20,7 +23,7 @@
                     <%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true})%>
                 </p>
                 <% if (config.feed) { %>
-                    <p><%- link_to('/atom.xml', 'RSS', {external: true})%></p>
+                    <p><%- link_to(url_for(config.feed.path), 'RSS', {external: true})%></p>
                 <% } %>
             </section>
             <section class="cpr">
