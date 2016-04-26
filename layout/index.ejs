@@ -3,7 +3,6 @@
     <h1><a href="<%- item.path %>"><%= item.title %></a></h1>
     <%- item.excerpt %>
     <p class="meta">
-        <%- renderTags(item.tags['_index']) %>
         <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
     </p>
 </article>
