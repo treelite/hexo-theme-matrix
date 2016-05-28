@@ -14,17 +14,13 @@
         <aside>
             <section class="profile">
                 <header>
-                    <span class="avatar"><a href="<%- config.root %>"></a></span>Treelite
+                    <a href="<%- config.root %>"></a>
                 </header>
-                <p>Web Developer | Beijing, China</p>
-                <p><%- mail_to(config.email) %></p>
-                <p>
-                    <%- link_to('https://github.com/treelite', 'GitHub', {external: true})%>
-                    <%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true})%>
+                <h1>Treelite</h1>
+                <p>Web Developer | Melbourne</p>
+                <p class="links">
+                <%- mail_to(config.email, 'Email', {class: 'gmail'}) %><%- link_to('https://github.com/treelite', 'GitHub', {external: true, class: 'github'})%><%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true, class: 'douban'})%><% if (config.feed) { link_to(url_for(config.feed.path), 'RSS', {external: true}) } %>
                 </p>
-                <% if (config.feed) { %>
-                    <p><%- link_to(url_for(config.feed.path), 'RSS', {external: true})%></p>
-                <% } %>
             </section>
             <section class="cpr">
                 <p>© <%= (new Date()).getFullYear() %> Treelite</p>
