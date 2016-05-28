@@ -1,16 +1,19 @@
 // Fork from https://github.com/chriskempson/tomorrow-theme
-highlight-background = #2d2d2d
+highlight-background = #090B18
 highlight-current-line = #393939
-highlight-selection = #515151
 highlight-foreground = #cccccc
-highlight-comment = #999999
-highlight-red = #f2777a
-highlight-orange = #f99157
-highlight-yellow = #ffcc66
-highlight-green = #99cc99
-highlight-aqua = #66cccc
-highlight-blue = #6699cc
-highlight-purple = #cc99cc
+highlight-comment = #595959
+
+highlight-id = #FC6621
+highlight-variable = #FD9827
+highlight-string = #65CC40
+highlight-keyword = #EEDD36
+highlight-buildin = #FC6621
+highlight-number = #CCFC43
+highlight-tag = #FEDC32
+highlight-name = #5CA5F3
+highlight-params = #87A8CE
+highlight-attr = #63A5F3
 
 $code-block
     background: highlight-background
@@ -110,50 +113,63 @@ pre
 
 pre
     .comment
-    .title
+    .doctype
+    .meta
         color: highlight-comment
     .variable
+        color: highlight-variable
+    .title
     .attribute
     .tag
+        color: highlight-tag
+    .tag .name
+        color: highlight-name
+    .tag .attr
+        color: highlight-name
+        font-weight: bold
     .regexp
+    .string
+        color: highlight-string
     .ruby .constant
     .xml .tag .title
     .xml .pi
-    .xml .doctype
-    .html .doctype
     .css .id
     .css .class
     .css .pseudo
-        color: highlight-red
+        color: highlight-id
     .number
+        color: highlight-number
     .preprocessor
     .built_in
     .literal
-    .params
     .constant
-        color: highlight-orange
-    .class
-    .ruby .class .title
-    .css .rules .attribute
-        color: highlight-green
-    .string
-    .value
-    .inheritance
-    .header
-    .ruby .symbol
-    .xml .cdata
-        color: highlight-green
-    .css .hexcolor
-        color: highlight-aqua
-    .function
-    .python .decorator
-    .python .title
-    .ruby .function .title
-    .ruby .title .keyword
-    .perl .sub
-    .javascript .title
-    .coffeescript .title
-        color: highlight-blue
     .keyword
-    .javascript .function
-        color: highlight-purple
+        color: highlight-keyword
+    .params
+        color: highlight-params
+    .function
+        color: #FFF
+
+.javascript
+    .keyword
+        color: highlight-buildin
+        font-weight: bold
+    .subst
+        color: highlight-params
+
+.css
+    .selector-tag
+        color: highlight-buildin
+        font-weight: bold
+    .selector-class
+        color: highlight-tag
+    .attribute
+        color: highlight-attr
+        font-weight: bold
+
+.sh
+    .built_in
+        color: highlight-buildin
+        font-weight: bold
+    .variable
+        color: highlight-params
