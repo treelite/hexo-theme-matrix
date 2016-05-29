@@ -11,8 +11,9 @@ aside
     padding: $aside-padding
     border-right: 1px solid #CCC
     background-color: #EEE
-    background-image: url(img/sideBG.jpg)
-    background-size: auto 100%
+    background-size: $width-aside
+    background-position: left center
+    background-repeat: no-repeat
 
     .profile
         text-align: center
@@ -37,32 +38,41 @@ aside
         p
             margin: 10px 0
 
-            &.links
-                margin-top: 30px
-                padding: 5px
-                border-radius: 5px
-                text-align: center
-                background: rgba(255, 255, 255, 0.3)
-                a
-                    display: inline-block
-                    margin: 0 5px
-                    width: 32px
-                    height: 32px
-                    background-position: 0 0
-                    background-repeat: no-repeat
-                    background-size: 100%
-                    text-indent: -999px
-
-                    &.github
-                        background-image: url(img/GitHub-Mark-64px.png)
-                    &.douban
-                        background-image: url(img/Douban-64px.png)
-                    &.gmail
-                        background-image: url(img/Gmail-64px.png)
-
         h1
             margin: 0
             font-size: 25px
+
+    .links
+        position: absolute
+        left: $aside-padding
+        right: $aside-padding
+        bottom: 70px
+        padding: 5px
+        border-radius: 5px
+        text-align: center
+        background: rgba(255, 255, 255, 0.3)
+        a
+            display: inline-block
+            margin: 0 5px
+            width: 32px
+            height: 32px
+            background-position: 0 0
+            background-repeat: no-repeat
+            background-size: 100%
+            text-indent: -999px
+            -webkit-filter: grayscale(100%)
+
+            &:hover
+                -webkit-filter: none
+
+            &.github
+                background-image: url(img/GitHub-64px.png)
+            &.douban
+                background-image: url(img/Douban-64px.png)
+            &.gmail
+                background-image: url(img/Gmail-64px.png)
+            &.rss
+                background-image: url(img/RSS-64px.png)
 
     .cpr
         position: absolute
