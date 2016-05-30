@@ -11,17 +11,15 @@
         <%- partial('_partial/disqus') %>
     </head>
     <body>
-        <aside>
+        <aside data-bg="<%- bgList() %>">
             <section class="profile">
                 <header>
                     <a href="<%- config.root %>"></a>
                 </header>
-                <h1>Treelite</h1>
-                <p>Web Developer | Melbourne</p>
+                <h1><%= config.author %></h1>
+                <p><%= config.class %> | <%= config.location %></p>
             </section>
-            <section class="links">
-                <%- mail_to(config.email, 'Email', {class: 'gmail'}) %><%- link_to('https://github.com/treelite', 'GitHub', {external: true, class: 'github'})%><%- link_to('http://www.douban.com/people/treelite/', 'Douban', {external: true, class: 'douban'})%><% if (config.feed) { link_to(url_for(config.feed.path), 'RSS', {external: true, class: 'rss'}) } %>
-            </section>
+            <%- extLinks() %>
             <section class="cpr">
                 <p>© <%= (new Date()).getFullYear() %> Treelite</p>
                 <p>Powered by <%- link_to('http://hexo.io/', 'Hexo', {external: true}) %>, <%- link_to('https://github.com/treelite/hexo-theme-matrix', 'Matrix', {external: true}) %> Theme</p>
@@ -31,5 +29,25 @@
         <main>
             <%- body %>
         </main>
+        <script>
+            (function () {
+                var aside = document.querySelector('aside');
+                var bgs = aside.getAttribute('data-bg')
+                if (bgs) {
+                    bgs = bgs.split(';');
+                    var src = bgs[Math.floor(Math.random() * 10 % bgs.length)];
+                    var img = new Image();
+                    img.onload = function () {
+                        aside.style.backgroundImage = 'url('+ src +')';
+                        aside.className += ' show-bg';
+                        img = null;
+                    };
+                    img.onerror = function () {
+                        img = null;
+                    };
+                    img.src = src;
+                }
+            })();
+        </script>
     </body>
 </html>

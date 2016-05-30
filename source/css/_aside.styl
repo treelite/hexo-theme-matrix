@@ -15,6 +15,22 @@ aside
     background-position: left center
     background-repeat: no-repeat
 
+    &::before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: #EEE
+        z-index: -1
+
+    &.show-bg
+        &::before
+            opacity: 0
+            transition: opacity 1s ease
+
     .profile
         text-align: center
         color: #FFF
@@ -69,9 +85,9 @@ aside
                 background-image: url(img/GitHub-64px.png)
             &.douban
                 background-image: url(img/Douban-64px.png)
-            &.gmail
+            &.email
                 background-image: url(img/Gmail-64px.png)
-            &.rss
+            &.feed
                 background-image: url(img/RSS-64px.png)
 
     .cpr
