@@ -2,6 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <% if (config.favicon) { %>
+        <link rel="icon" type="image/x-icon" href="<%= config.favicon %>">
+        <% } %>
         <%- partial('_partial/title') %>
         <%- css('css/main') %>
         <% if (config.feed) { %>
