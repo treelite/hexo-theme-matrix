@@ -24,8 +24,17 @@ hexo.extend.helper.register('extLinks', function () {
         }
 
         var text = TEXT[name] || (name.charAt(0).toUpperCase() + name.substring(1));
+
+        var src;
+        if (name === 'feed') {
+            src = hexo.config.feed.path;
+        }
+        else {
+            src = PREFIX_URL[name] + value;
+        }
+
         html.push(
-            '<a href="' + PREFIX_URL[name] + value + '" ' + (name !== 'email' ? 'target="_blank"' : '') + ' title="' + text + '" class="' + name + '"></a>'
+            '<a href="' + src + '" ' + (name !== 'email' ? 'target="_blank"' : '') + ' title="' + text + '" class="' + name + '"></a>'
         );
     });
 
