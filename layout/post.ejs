@@ -8,13 +8,14 @@
 
 <% if (config.disqus_shortname) { %>
 <section id="disqus_thread" class="comments"></section>
+<script async="async" src="//<%=config.disqus_shortname%>.disqus.com/embed.js"></script>
 <% } %>
 
 <section class="links">
 <% if (page.prev) { %>
-    <a href="<%- url_for(page.prev.path) %>" class="prev"><%= page.prev.title %></a>
+    <a href="<%- url_for(page.prev.path) %>" class="prev"><%- svg('arrow', 20, 16) %><%= page.prev.title %></a>
 <% } %>
 <% if (page.next) { %>
-    <a href="<%- url_for(page.next.path) %>" class="next"><%= page.next.title %></a>
+    <a href="<%- url_for(page.next.path) %>" class="next"><%= page.next.title %><%- svg('arrow', 20, 16) %></a>
 <% } %>
 </section>
