@@ -2,6 +2,7 @@
 @require '_variables'
 
 .links
+    position: relative
     border-top: 1px dashed #CCC
     padding-top: 10px
     margin-top: 15px
@@ -13,12 +14,14 @@
 
     a
         &.prev
-            float: left
+            position: absolute
+            left: 0
             svg
                 margin-right: 5px
                 transform: rotate(180deg)
 
         &.next
-            float: right
+            position: absolute
+            right: 0
             svg
                 margin-left: 5px

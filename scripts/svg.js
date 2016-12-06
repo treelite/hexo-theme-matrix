@@ -22,7 +22,7 @@ hexo.extend.helper.register('svg', function (filename, width, height, className)
     }
 
     return ''
-        + '<svg' + (className ? ' className="' + className + '" ' : ' ') + 'aria-hidden="true" viewBox="' + viewBox + '" version="1.1" width="' + width + '" height="' + height + '">'
+        + '<svg' + (className ? ' className="' + className + '" ' : ' ') + 'viewBox="' + viewBox + '" version="1.1" width="' + width + '" height="' + height + '">'
         +   '<path fill-rule="evenodd" d="' + p + '" />'
         + '</svg>';
 });

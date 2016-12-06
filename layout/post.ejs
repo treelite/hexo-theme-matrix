@@ -10,6 +10,7 @@
 <% if (page.prev) { %>
     <a href="<%- url_for(page.prev.path) %>" class="prev"><%- svg('arrow', 20, 16) %><%= page.prev.title %></a>
 <% } %>
+<a href="<%- config.root %>"><%- svg('home', 18, 18) %></a>
 <% if (page.next) { %>
     <a href="<%- url_for(page.next.path) %>" class="next"><%= page.next.title %><%- svg('arrow', 20, 16) %></a>
 <% } %>
