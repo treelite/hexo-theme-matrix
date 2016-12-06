@@ -1,8 +1,8 @@
 // Fork from https://github.com/chriskempson/tomorrow-theme
-highlight-background = #090B18
+highlight-background = #1D3446
 highlight-current-line = #393939
 highlight-foreground = #cccccc
-highlight-comment = #595959
+highlight-comment = #999
 
 highlight-id = #FC6621
 highlight-variable = #FD9827
@@ -15,17 +15,19 @@ highlight-name = #5CA5F3
 highlight-params = #87A8CE
 highlight-attr = #63A5F3
 
+highlight-font-size = 14px
+highlight-line-height = 1.5
+
 $code-block
     background: highlight-background
     margin: 0 $main-padding * -1
     padding: 15px $main-padding
     border-style: solid
-    border-color: color-border
     border-width: 1px 0
     overflow: auto
     color: highlight-foreground
-    font-size: $font-size
-    line-height: $font-size * $line-height
+    font-size: highlight-font-size
+    line-height: highlight-font-size * highlight-line-height
 
 $line-numbers
     color: #666
@@ -71,11 +73,10 @@ pre
         text-align: right
         padding-right: 20px
     .line
-        height: $font-size * $line-height
+        height: highlight-font-size * highlight-line-height
 .gist
     margin: 0 $main-padding * -1
     border-style: solid
-    border-color: color-border
     border-width: 1px 0
     background: highlight-background
     padding: 15px $main-padding 15px 0
