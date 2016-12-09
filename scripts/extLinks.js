@@ -27,7 +27,7 @@ hexo.extend.helper.register('extLinks', function () {
 
         var src;
         if (name === 'feed') {
-            src = hexo.config.feed.path;
+            src = hexo.config.root + hexo.config.feed.path;
         }
         else {
             src = PREFIX_URL[name] + value;
