@@ -111,3 +111,39 @@ aside
         a
             color: #BBB
             text-decoration: underline
+
+    @media screen and (max-width: $breakpoint)
+        right: 0
+        width: auto
+        bottom: auto
+        box-shadow: 0 5px 10px #CCC
+        border-right: none
+        padding: 10px
+        min-width: $min-page-width
+        background-image: none !important
+
+        .profile
+            display: flex
+            align-items: center
+
+            header
+                margin: 0
+                width: 40px
+                height: @width
+                box-shadow: none
+                border: 3px solid #FFF
+
+            h1
+                margin: 0 1rem
+                color: #333
+                text-shadow: none
+            p
+                display: none
+
+        .links
+            top: 14px
+            left: auto
+            bottom: auto
+
+        .cpr
+            display: none

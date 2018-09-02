@@ -6,6 +6,10 @@ main
     section
         margin-top: $main-padding
 
+    @media screen and (max-width: $breakpoint)
+        margin-left: 0
+        margin-top: $aside-height
+
 main
     @import '_article'
     @import '_links'
