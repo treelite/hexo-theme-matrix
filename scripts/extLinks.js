@@ -3,29 +3,29 @@
  * @author treelite(c.xinle@gmail.com)
  */
 
-var LINKS = ['email', 'github', 'douban', 'feed'];
+const LINKS = ['email', 'github', 'douban', 'feed'];
 
-var TEXT = {
+const TEXT = {
     feed: 'RSS'
 };
 
-var PREFIX_URL = {
+const PREFIX_URL = {
     email: 'mailto:',
     github: 'https://github.com/',
     douban: 'http://www.douban.com/people/'
 };
 
-hexo.extend.helper.register('extLinks', function () {
-    var html = [];
+hexo.extend.helper.register('extLinks', () => {
+    const html = [];
     LINKS.forEach(function (name) {
-        var value = hexo.config[name];
+        const value = hexo.config[name];
         if (!value) {
             return;
         }
 
-        var text = TEXT[name] || (name.charAt(0).toUpperCase() + name.substring(1));
+        const text = TEXT[name] || (name.charAt(0).toUpperCase() + name.substring(1));
 
-        var src;
+        let src;
         if (name === 'feed') {
             src = hexo.config.root + hexo.config.feed.path;
         }
